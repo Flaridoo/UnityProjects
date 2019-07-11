@@ -121,4 +121,20 @@ public class CharaterMove : MonoBehaviour
             }
         }
     }
+
+    public void BackDown()
+    {
+        if(m_temp_cube)
+        {
+            Transform tran = transform.Find("Cube(Clone)");
+            if (tran)
+            {
+                tran.localPosition += new Vector3(0, 0, -1.2f);
+            }
+            else
+            {
+                Debug.Log("tran is null");
+            }
+        }
+    }
 }

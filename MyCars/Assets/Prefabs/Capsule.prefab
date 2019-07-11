@@ -650,7 +650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7965987366042576884}
   - component: {fileID: 2888406608439025105}
-  - component: {fileID: 2888406608439025107}
+  - component: {fileID: 1537547020410363608}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -692,11 +692,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_cube_parent: {fileID: 0}
+  m_back_time: 0.5
   m_mouth: {fileID: 1220448329}
   m_jump_distance: {x: 0, y: 1, z: 0}
   m_jump_time: 1
   m_position: {x: 0, y: 0, z: 0}
---- !u!54 &2888406608439025107
+--- !u!54 &1537547020410363608
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

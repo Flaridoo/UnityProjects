@@ -21,7 +21,8 @@ public class CubeMove : MonoBehaviour
         
         if(transform.parent && transform.parent.name == "Charater")
         {
-            if(transform.localPosition.y < 1.4)
+            float distance = Vector2.Distance(transform.localPosition, transform.parent.localPosition);
+            if (transform.localPosition.y < 1.4 && distance > 1f)
             {
                 transform.parent = Manager.instance.m_cube_parent.transform;
             }

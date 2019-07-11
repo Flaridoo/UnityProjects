@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
+    public GameObject m_charater;
+    public GameObject m_plane;
     public GameObject m_contral_panel;
     public GameObject m_cube_parent;
     public GameObject m_cube;
 
     private Vector3 offset = new Vector3(0, 5, 4);//相机相对于玩家的位置
-    public Transform target;
     private Vector3 pos;
     public float speed = 2;
 
@@ -19,14 +20,17 @@ public class Manager : MonoBehaviour
     void Start()
     {
         instance = this;
+
+        m_charater.SetActive(true);
+        m_plane.SetActive(true);
     }   
     
     // Update is called once per frame
     void Update()
     {
-        pos = target.position + offset;
+        pos = m_charater.transform.position + offset;
         this.transform.position = Vector3.Lerp(this.transform.position, pos, speed * Time.deltaTime);//调整相机与玩家之间的距离
-        Quaternion angel = Quaternion.LookRotation(target.position - this.transform.position);//获取旋转角度
+        Quaternion angel = Quaternion.LookRotation(m_charater.transform.position - this.transform.position);//获取旋转角度
         this.transform.rotation = Quaternion.Slerp(this.transform.rotation, angel, speed * Time.deltaTime);
         
 
