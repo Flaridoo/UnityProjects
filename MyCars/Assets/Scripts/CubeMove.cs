@@ -14,10 +14,6 @@ public class CubeMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            transform.localPosition +=new Vector3(0, 0.1f,0);
-        }
         
         if(transform.parent && transform.parent.name == "Charater")
         {

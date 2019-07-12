@@ -34,19 +34,10 @@ public class Drections : MonoBehaviour
             transform.localPosition = m_init_pos + dir.normalized * m_radius * 1.1f;
         }
         
-        float angle = Vector3.Angle(new Vector3(dir.x, 0, dir.y), Vector3.right);
-        print("角度B：" + angle);
-
-
-        Vector3 targetDir = target.position - transform.position;
-        Vector3 playerForward = target.rotation * transform.forward;
-        float angle = Mathf.Acos(Vector3.Dot(playerForward.normalized, targetDir.normalized)) * Mathf.Rad2Deg;
-        print("角度C：" + angle);
-
+        float angle = Vector3.Angle(new Vector3(dir.x, 0, dir.y), Vector3.back);
+        angle = transform.localPosition.x > 0 ? -angle : angle;
         m_charater.transform.localPosition += m_charater.transform.forward * dir.magnitude * m_rate_speed;
         m_charater.transform.localEulerAngles = new Vector3(0, angle, 0);
-
-        Debug.Log(dir.normalized);
     }
 
     public void DragStart()
