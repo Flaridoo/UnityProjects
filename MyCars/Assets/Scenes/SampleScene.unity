@@ -2033,6 +2033,7 @@ MonoBehaviour:
   m_init_pos: {x: 0, y: 0, z: 0}
   m_radius: 150
   m_rate_speed: 0.0001
+  m_charater_rotate_speed: 1
 --- !u!114 &2888406608439025106 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2888406608439025105, guid: 1a1fa266d8b7120408d0cacc819d63e7,
@@ -2056,6 +2057,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Charater
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888406608439025104, guid: 1a1fa266d8b7120408d0cacc819d63e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2888406608439025105, guid: 1a1fa266d8b7120408d0cacc819d63e7,
         type: 3}
@@ -2134,6 +2140,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7220284764498925143, guid: 96f87defecc303d488978feadbd4ef31,
+        type: 3}
+      propertyPath: m_Name
+      value: Cube(Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220284764498925143, guid: 96f87defecc303d488978feadbd4ef31,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7220284764498925136, guid: 96f87defecc303d488978feadbd4ef31,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2187,16 +2203,6 @@ PrefabInstance:
     - target: {fileID: 7220284764498925136, guid: 96f87defecc303d488978feadbd4ef31,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7220284764498925143, guid: 96f87defecc303d488978feadbd4ef31,
-        type: 3}
-      propertyPath: m_Name
-      value: Cube(Clone)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7220284764498925143, guid: 96f87defecc303d488978feadbd4ef31,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7220284764498925149, guid: 96f87defecc303d488978feadbd4ef31,
